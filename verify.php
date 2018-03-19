@@ -3,7 +3,7 @@ $access_token = '70eifKrc4Mi8yGYsCXRcXluGy8e//eQfSt8ptK+kpqwJAdV+oUhrH+27lfVdjm9
 $url = 'https://api.line.me/oauth2/v2.1/verify';
 $headers = array('Content-Type: application/x-www-form-urlencoded' . $access_token);
 $ch = curl_init($url);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_HTTPHEADER,  $access_token);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
